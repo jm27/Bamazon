@@ -7,9 +7,6 @@ BAMAZON is an Amazon-like storefront using MySQL . The app take in orders from c
 [BAMAZON-APP GITHUB LINK](https://github.com/jm27/Bamazon "BAMAZON's REPO Homepage")
 ======
 
-
-Make sure you save and require the MySQL and Inquirer npm packages your app will need them for data input and storage.
-
 # Instructions
 
 First in order to run the app you must be sure that you have installed the node modules that are needed to run the app.
