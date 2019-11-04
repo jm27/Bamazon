@@ -26,11 +26,14 @@ connection.connect((err) => {
 
 
 function displayProducts() {
-    console.log("Displaying all products...\n");
     connection.query("SELECT * FROM products", function (err, res) {
         if (err) throw err;
         // Log all results of the SELECT statement
+
+        console.log("Displaying all products...\n");
+        console.log("/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/\n");
         console.table(res);
+        console.log("/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/\n");
     });
 }
 
@@ -66,53 +69,66 @@ function productSearch() {
             name: "product",
             type: "input",
             message: "What product would you like to buy(id)?!\n"
-        },
-           { 
-            name: "quantity",
-            type: "input",
-            message: "`How many units are you buying today?!\n`"
-           }
+        }
+
         ])
         .then(function (answer) {
-            console.log(answer.product);
-            console.log(answer.quantity);
-
+           
             //let query = "SELECT * FROM products WHERE id = ?";
             connection.query('SELECT * FROM `products` WHERE `id` = ?', [answer.product],
             function (err, res) {
                 if (err) throw err;
                 // Log all results of the SELECT statement
                 console.table(res);
+                console.log("Inventoy : " + res[0].stock_quantity)
+                productUpdate(res[0].stock_quantity, res[0].price, res[0].id);
             });
 
-            productUpdate();
+           
         });
 }
 
 
-// function productUpdate() {
-//     inquirer
-//         .prompt([
-//             {
-//                name: "quantity",
-//                 type: "input",
-//                 message: `How many units are you buying today?!\n`
-//              }
-//         ])
-//         .then(function (answer) {
-//             console.log(answer.product);
-//             //let query = "SELECT * FROM products WHERE id = ?";
-//             connection.query('SELECT `stock_quantity` FROM `products` WHERE `id` = ?', [answer.product],
-//             function (err, res) {
-//                 if (err) throw err;
-//                 // Log all results of the SELECT statement
-//                 console.table(res);
-//                 connection.end();
-//             });
+ function productUpdate(stock, price, id) {
+ inquirer
+     .prompt([
+          {
+               name: "quantity",
+                 type: "input",
+                message: `How many units are you buying today?!\n`
+             }
+        ])
+        .then(function (answer) {
+            //let query = "SELECT * FROM products WHERE id = ?"
+            if(answer.quantity > stock){
+                console.log("Sorry our inventory is limited, Insufficient quantity!")
+               buy();
+            }
+            else {
+                let update = stock - answer.quantity;
+                let total = price * answer.quantity;
 
-            
-//         });
-// }
+                console.log("Congrats! your total is:  " + total + "  millions!!");
+                console.log("Forgot to tell you we deal in millions! ps. No Refunds!")
+                console.log("Updated Inventory " + update + " !");
+
+                connection.query('UPDATE `products` SET ? WHERE ?', [
+                    {
+                      stock_quantity: update
+                    },
+                    {
+                      id: id
+                    }
+                  ],
+                function (err, res) {
+                    if (err) throw err;
+                    // Log all results of the SELECT statement
+                    displayProducts();
+                    buy();
+                });
+            } 
+        });
+}
 
 
 
