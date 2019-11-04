@@ -25,22 +25,29 @@ If any of the dependencies are missing you can just type inside folder's termina
  Running this application will first display a prompt with two choices "Buy" or "Don't Buy"
  
  
-![MAIN MENU](https://github.com/jm27/liri-node-app/blob/master/imgs/concert-this.png "4")
+![MAIN MENU](https://github.com/jm27/Bamazon/blob/master/imgs/bamazon1.png "1")
 
  
  if you choose "Buy" this will display  all of the items available for sale. Including the ids, names, and prices of products for sale.
  
-![BUY](https://github.com/jm27/liri-node-app/blob/master/imgs/concert-this.png "4")
+![BUY](https://github.com/jm27/Bamazon/blob/master/imgs/buy.png "2")
+
+
+ 
+ if you choose "Don't Buy" this will log a phrase like `Please come back again, with some cash!`.
+ 
+
+![NO](https://github.com/jm27/Bamazon/blob/master/imgs/no.png "3")
 
 Then it prompts users with two messages.
 
    * The first should ask them the ID of the product they would like to buy.
    
-![ID](https://github.com/jm27/liri-node-app/blob/master/imgs/concert-this.png "4")
+![ID](https://github.com/jm27/Bamazon/blob/master/imgs/id.png "4")
 
    * The second message should ask how many units of the product they would like to buy.
 
-![QUANTITY](https://github.com/jm27/liri-node-app/blob/master/imgs/concert-this.png "4")
+![QUANTITY](https://github.com/jm27/liri-node-app/blob/master/imgs/inventory.png "5")
 
 
 
@@ -49,14 +56,14 @@ Once the customer has placed the order, application checks if inventory has enou
    * If not, the app logs a phrase like `Insufficient quantity!`, and then prevent the order from going through.
 
    
-![INSUFFICIENT](https://github.com/jm27/liri-node-app/blob/master/imgs/concert-this.png "4")
+![INSUFFICIENT](https://github.com/jm27/Bamazon/blob/master/imgs/insufficient.png "6")
 
 
 However, if there are enough of the product, the app should fulfill the customer's order.
    * This means updating the SQL database to reflect the remaining quantity.
    * Once the update goes through, the app shows the customer the total cost of their purchase.
 
-![TOTAL](https://github.com/jm27/liri-node-app/blob/master/imgs/concert-this.png "4")
+![TOTAL](https://github.com/jm27/Bamazon/blob/master/imgs/update.png "7")
 
 
 # Technologies
