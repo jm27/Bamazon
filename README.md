@@ -9,7 +9,7 @@ BAMAZON is an Amazon-like storefront using MySQL . The app take in orders from c
 
 # Instructions
 
-First in order to run the app you must be sure that you have installed the node modules that are needed to run the app.
+* First in order to run the app you must be sure that you have installed the node modules that are needed to run the app.
 
 Type: "npm-init", inside folder's terminal/bash window.
 
@@ -21,24 +21,24 @@ Type: "npm install" and make sure all dependencies are installed inside package.
 
 If any of the dependencies are missing you can just type inside folder's terminal/bash window: "npm install inquirer mysql" . 
 
- Running this application will first display a prompt with two choices "Buy" or "Don't Buy"
+ * Running this application will first display a prompt with two choices "Buy" or "Don't Buy"
  
  
 ![MAIN MENU](https://github.com/jm27/Bamazon/blob/master/imgs/bamazon1.png "1")
 
  
- if you choose "Buy" this will display  all of the items available for sale. Including the ids, names, and prices of products for sale.
+ * If you choose "Buy" this will display  all of the items available for sale. Including the ids, names, and prices of products for sale.
  
 ![BUY](https://github.com/jm27/Bamazon/blob/master/imgs/buy.png "2")
 
 
  
- if you choose "Don't Buy" this will log a phrase like `Please come back again, with some cash!`.
+ * If you choose "Don't Buy" this will log a phrase like `Please come back again, with some cash!`.
  
 
 ![NO](https://github.com/jm27/Bamazon/blob/master/imgs/no.png "3")
 
-Then it prompts users with two messages.
+* Then it prompts users with two messages.
 
    * The first should ask them the ID of the product they would like to buy.
    
@@ -46,7 +46,7 @@ Then it prompts users with two messages.
 
    * The second message should ask how many units of the product they would like to buy.
 
-![QUANTITY](https://github.com/jm27/liri-node-app/blob/master/imgs/inventory.png "5")
+![QUANTITY]((https://github.com/jm27/Bamazon/blob/master/imgs/inventory.png "5")
 
 
 
