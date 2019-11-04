@@ -46,7 +46,7 @@ If any of the dependencies are missing you can just type inside folder's termina
 
    * The second message should ask how many units of the product they would like to buy.
 
-![QUANTITY]((https://github.com/jm27/Bamazon/blob/master/imgs/inventory.png "5")
+![QUANTITY](https://github.com/jm27/Bamazon/blob/master/imgs/inventory.png "5")
 
 
 
