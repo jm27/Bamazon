@@ -3,13 +3,12 @@
 
 BAMAZON is an Amazon-like storefront using MySQL . The app take in orders from customers and deplete stock from the store's inventory. 
 
-Make sure you save and require the MySQL and Inquirer npm packages your app will need them for data input and storage.
-
 
 [BAMAZON-APP GITHUB LINK](https://github.com/jm27/Bamazon "BAMAZON's REPO Homepage")
 ======
 
-LIRI is divided into four JavaScript files(BIT.js, key.js, liri.js, OMDB.js). Contains a .env file and a .gitignore file. A random.txt file and a log.txt file. Also a folder named imgs with screenshoots of the app working and instructions. All inside a folder called liri-node-app.
+
+Make sure you save and require the MySQL and Inquirer npm packages your app will need them for data input and storage.
 
 # Instructions
 
