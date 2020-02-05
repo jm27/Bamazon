@@ -70,3 +70,17 @@ However, if there are enough of the product, the app should fulfill the customer
 BAMAZON app was written inside a Javascript file, it uses Inquirer.js, MySQL.js, NODE.js as Node packages to run.
 
 BAMAZON communicates to MySQL Database.
+
+## Versioning
+Bamazon V1.1
+
+## Authors
+
+* **Jesus Esquer** - *Main Contributor* - [jm27](https://github.com/jm27)
+
+
+## Acknowledgments
+
+* Thanks to Classmates, Instructors, and TA's .
+* Bootcamp 2019-2020.
+
